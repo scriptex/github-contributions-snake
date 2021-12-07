@@ -2,7 +2,13 @@ name: Generate SVG image
 
 on:
   schedule:
-    - cron: "0 */2 * * *" # every 2 hours
+    - cron: "0 */12 * * *" # every 12 hours
+  
+  workflow_dispatch:
+  
+  push:
+    branches:
+      - master
 
 jobs:
   generate:
